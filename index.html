@@ -44,10 +44,8 @@
     .btn-primary:hover { filter: brightness(1.08); }
     .btn-white { background: #fff; color: var(--purple); }
     .btn-outline-light { border-color: rgba(255,255,255,.45); color: #fff; }
-    .i-wa { width: 16px; height: 16px; flex: none; }
     .short { display: none; }
-    .wa-float { display: none; position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 35; width: 56px; height: 56px; border-radius: 50%; background: var(--purple); color: #fff; place-items: center; box-shadow: 0 10px 28px rgba(20,10,50,.35); }
-    .wa-float svg { width: 26px; height: 26px; }
+    .cta-float { display: none; position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 35; box-shadow: 0 10px 28px rgba(20,10,50,.35); }
 
     /* —— Hero —— */
     .hero { padding: 48px 0 32px; }
@@ -235,7 +233,7 @@
       .feat { border-right: 0 !important; }
       .feat:nth-last-child(-n+2) { border-bottom: 1px solid var(--line); }
       .feat:last-child { border-bottom: 0; }
-      .wa-float { display: grid; }
+      .cta-float:not(.off) { display: inline-flex; }
       .site-foot { padding-bottom: 88px; }
     }
     @media (max-width: 480px) {
@@ -249,7 +247,6 @@
   </style>
 </head>
 <body>
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8.6 8.2c.2-.5.5-.5.8-.5h.5l.9 2-.6.9c.5 1 1.3 1.8 2.3 2.3l.9-.6 2 .9v.5c0 .3 0 .6-.5.8-.6.3-1.6.4-3-.4a7.6 7.6 0 0 1-2.9-2.9c-.8-1.4-.7-2.4-.4-3Z" fill="currentColor"/></symbol></svg>
   <nav>
     <div class="wrap nav-in">
       <a class="brand" href="#top">
@@ -264,7 +261,7 @@
       </div>
       <div class="nav-actions">
         <a class="btn btn-ghost" href="https://app.nodusapp.co.uk">Sign in</a>
-        <a class="btn btn-primary" href="https://wa.me/WHATSAPP_NUMBER?text=Hi%20Karl%2C%20I%27d%20like%20to%20see%20Nodus" target="_blank" rel="noopener"><svg class="i-wa" aria-hidden="true"><use href="#i-wa"/></svg><span class="long">Message us on WhatsApp</span><span class="short">WhatsApp us</span></a>
+        <button type="button" class="btn btn-primary" data-open="demo"><span class="long">Send your product list</span><span class="short">Send your list</span></button>
       </div>
     </div>
   </nav>
@@ -310,8 +307,8 @@
           <h1>Wholesale operations made <em>simple</em></h1>
           <p class="lead">No more notebook, spreadsheet and three apps. Nodus follows each order from WhatsApp message to invoice — one system, one screen, no re-keying.</p>
           <div class="hero-ctas">
-            <a class="btn btn-primary" href="https://wa.me/WHATSAPP_NUMBER?text=Hi%20Karl%2C%20I%27d%20like%20to%20see%20Nodus" target="_blank" rel="noopener"><svg class="i-wa" aria-hidden="true"><use href="#i-wa"/></svg>Message us on WhatsApp</a>
-            <button type="button" class="btn btn-ghost" data-open="demo">Send your product list — we’ll set it up for you</button>
+            <button type="button" class="btn btn-primary" data-open="demo">Send your product list — we’ll set it up for you</button>
+            <a class="text-link" href="#how">See how it works →</a>
           </div>
         </div>
       </div>
@@ -544,8 +541,8 @@
           <h2>See it running on a real order book</h2>
           <p>Send us your product list and we’ll set Nodus up on it. No sales call, no slide deck — just the software.</p>
           <div class="hero-ctas">
-            <a class="btn btn-white" href="https://wa.me/WHATSAPP_NUMBER?text=Hi%20Karl%2C%20I%27d%20like%20to%20see%20Nodus" target="_blank" rel="noopener"><svg class="i-wa" aria-hidden="true"><use href="#i-wa"/></svg>Message us on WhatsApp</a>
-            <button type="button" class="btn btn-outline-light" data-open="demo">Send your product list — we’ll set it up for you</button>
+            <button type="button" class="btn btn-white" data-open="demo">Send your product list — we’ll set it up for you</button>
+            <a class="btn btn-outline-light" href="mailto:info@nodusapp.co.uk">info@nodusapp.co.uk</a>
           </div>
         </div>
       </div>
@@ -580,7 +577,7 @@
         <div>
           <p class="kicker">Built in Grimsby</p>
           <p class="lead">I’m Karl. I built Nodus for the merchants on our doorstep. Message me and I’ll set it up on your own stock list — no sales call.</p>
-          <a class="btn btn-primary" href="https://wa.me/WHATSAPP_NUMBER?text=Hi%20Karl%2C%20I%27d%20like%20to%20see%20Nodus" target="_blank" rel="noopener"><svg class="i-wa" aria-hidden="true"><use href="#i-wa"/></svg>Message us on WhatsApp</a>
+          <button type="button" class="btn btn-primary" data-open="demo">Send your product list — we’ll set it up for you</button>
         </div>
       </div>
     </section>
@@ -591,7 +588,7 @@
           <p class="kicker">Founding merchants</p>
           <h2>Two founding places this month</h2>
           <p class="offer">Half price for 12 months, setup free. <strong>From £349/month.</strong></p>
-          <a class="btn btn-primary" href="https://wa.me/WHATSAPP_NUMBER?text=Hi%20Karl%2C%20I%27d%20like%20to%20see%20Nodus" target="_blank" rel="noopener"><svg class="i-wa" aria-hidden="true"><use href="#i-wa"/></svg>Message us on WhatsApp</a>
+          <button type="button" class="btn btn-primary" data-open="demo">Send your product list — we’ll set it up for you</button>
           <p class="small">Standard pricing from £349/month.</p>
         </div>
       </div>
@@ -602,8 +599,7 @@
         <h2>Get started with Nodus</h2>
         <p class="lead">See how Nodus can help you save time, reduce admin, and run a tighter wholesale operation — on your own stock list.</p>
         <div class="hero-ctas" style="justify-content:center">
-          <a class="btn btn-primary" href="https://wa.me/WHATSAPP_NUMBER?text=Hi%20Karl%2C%20I%27d%20like%20to%20see%20Nodus" target="_blank" rel="noopener"><svg class="i-wa" aria-hidden="true"><use href="#i-wa"/></svg>Message us on WhatsApp</a>
-          <button type="button" class="btn btn-ghost" data-open="demo">Send your product list — we’ll set it up for you</button>
+          <button type="button" class="btn btn-primary" data-open="demo">Send your product list — we’ll set it up for you</button>
         </div>
       </div>
     </section>
@@ -625,7 +621,6 @@
       <div>
         <h4>Get in touch</h4>
         <a href="mailto:info@nodusapp.co.uk">info@nodusapp.co.uk</a>
-        <a href="https://wa.me/WHATSAPP_NUMBER?text=Hi%20Karl%2C%20I%27d%20like%20to%20see%20Nodus" target="_blank" rel="noopener">Message us on WhatsApp</a>
         <a href="#contact" data-open="demo">Send your product list</a>
       </div>
     </div>
@@ -635,7 +630,7 @@
     </div>
   </footer>
 
-  <a class="wa-float" href="https://wa.me/WHATSAPP_NUMBER?text=Hi%20Karl%2C%20I%27d%20like%20to%20see%20Nodus" target="_blank" rel="noopener" aria-label="Message us on WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+  <button type="button" class="cta-float btn btn-primary off" data-open="demo">Send your product list</button>
 
   <div class="toast" id="toast"></div>
 
@@ -786,6 +781,11 @@
       if (e.target.closest('[data-demo]')) say('Preview only — nothing was saved.');
     });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAll(); });
+    // Floating button only once the hero's own button has scrolled away.
+    const float = document.querySelector('.cta-float');
+    new IntersectionObserver(([e]) => float.classList.toggle('off', e.isIntersecting))
+      .observe(document.querySelector('.hero .hero-ctas'));
+
     const video = document.getElementById('video');
     const src = video.dataset.src.trim();
     if (src && src !== 'VIDEO_URL') {
