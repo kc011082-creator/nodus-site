@@ -94,6 +94,7 @@
     .tag { color: #5b21b6; }
     .tag.go { color: #0f766e; }
     .tag.wait { color: #92400e; }
+    .tag.done { color: #6b7280; }
     .ui-main { padding: 12px 12px 10px; }
     .ui-top { display: flex; justify-content: space-between; gap: 8px; align-items: flex-start; margin-bottom: 8px; }
     .ui-top strong { display: block; font-size: 14px; }
@@ -107,7 +108,7 @@
     .map { height: 118px; border-radius: 10px; overflow: hidden; background: #dce8d4; position: relative; }
     .map svg { width: 100%; height: 100%; display: block; }
     .tl { display: flex; justify-content: space-between; margin-top: 10px; padding: 0 8px; position: relative; }
-    .tl::before { content: ""; position: absolute; left: 18px; right: 18px; top: 9px; height: 3px; background: linear-gradient(90deg, #6d4dff 50%, #d5d8e0 50%); border-radius: 99px; }
+    .tl::before { content: ""; position: absolute; left: 18px; right: 18px; top: 9px; height: 3px; background: linear-gradient(90deg, #6d4dff 67%, #d5d8e0 67%); border-radius: 99px; }
     .tl i { width: 18px; height: 18px; border-radius: 50%; display: grid; place-items: center; font-style: normal; font-size: 9px; font-weight: 800; position: relative; z-index: 1; }
     .tl .done { background: #6d4dff; color: #fff; }
     .tl .todo { background: #e5e7eb; color: #6b7280; }
@@ -251,6 +252,7 @@
       .feat { border-right: 0 !important; }
       .feat:nth-last-child(-n+2) { border-bottom: 1px solid var(--line); }
       .feat:last-child { border-bottom: 0; }
+      .glass.app .ui-split { grid-template-columns: 1fr; min-height: 0; }
       .cta-float:not(.off) { display: inline-flex; }
       .site-foot { padding-bottom: 88px; }
     }
@@ -396,25 +398,25 @@
                   <div class="ui-split">
                     <div class="ui-side">
                       <h4>Route planner</h4>
-                      <div class="ui-field">Driver / van</div>
-                      <div class="ui-box">Daniel Jackson — DN16 1BP</div>
+                      <div class="ui-field">Van / driver</div>
+                      <div class="ui-box">VE71 UHB — Daniel Jackson</div>
                       <div class="ui-field">Search</div>
                       <div class="ui-box ui-search">Address or shipment ID</div>
                       <div class="ui-stops-h"><span>Stops</span><span>14</span></div>
                       <div class="ui-stop">
-                        <div class="meta"><span class="tag">Staged</span><span>SHP-1842</span></div>
+                        <div class="meta"><span class="tag done">Delivered</span><span>SHP-1842</span></div>
                         <strong>The Salt Cod Inn</strong>
-                        <div>Cleethorpes · 08:40</div>
+                        <div>DN35 · Cleethorpes · 08:40</div>
                       </div>
                       <div class="ui-stop on">
-                        <div class="meta"><span class="tag.go">In transit</span><span>SHP-1847</span></div>
+                        <div class="meta"><span class="tag go">In transit</span><span>SHP-1847</span></div>
                         <strong>Riverside Steak &amp; Seafood</strong>
-                        <div>Hull · 09:15</div>
+                        <div>HU1 · Hull · 09:30</div>
                       </div>
                       <div class="ui-stop">
-                        <div class="meta"><span class="tag.wait">Scheduled</span><span>SHP-1851</span></div>
-                        <strong>Grand Harbour Hotel</strong>
-                        <div>Grimsby · 10:05</div>
+                        <div class="meta"><span class="tag wait">Scheduled</span><span>SHP-1858</span></div>
+                        <strong>The Royal Hotel</strong>
+                        <div>LN1 · Lincoln · 10:45</div>
                       </div>
                     </div>
                     <div class="ui-main">
@@ -442,7 +444,7 @@
                       <div class="tl">
                         <div><i class="done">1</i>Scheduled</div>
                         <div><i class="done">2</i>Staged</div>
-                        <div><i class="todo">3</i>In Transit</div>
+                        <div><i class="done">3</i>In Transit</div>
                         <div><i class="todo">4</i>Delivered</div>
                       </div>
                     </div>
@@ -721,14 +723,14 @@
       <div class="ui-split">
         <div class="ui-side">
           <h4>Route planner</h4>
-          <div class="ui-field">Driver / van</div>
-          <div class="ui-box">Daniel Jackson — DN16 1BP</div>
+          <div class="ui-field">Van / driver</div>
+          <div class="ui-box">VE71 UHB — Daniel Jackson</div>
           <div class="ui-stops-h"><span>Stops</span><span>14</span></div>
-          <div class="ui-stop"><div class="meta"><span class="tag">Staged</span><span>SHP-1842</span></div><strong>The Salt Cod Inn</strong><div>Cleethorpes · 42 kg · £1,284.50</div></div>
-          <div class="ui-stop on"><div class="meta"><span class="tag.go">In transit</span><span>SHP-1847</span></div><strong>Riverside Steak &amp; Seafood</strong><div>Hull · 86 kg · £1,940.20</div></div>
-          <div class="ui-stop"><div class="meta"><span class="tag.wait">Scheduled</span><span>SHP-1851</span></div><strong>Grand Harbour Hotel</strong><div>Grimsby · 64 kg · £1,112.00</div></div>
-          <div class="ui-stop"><div class="meta"><span class="tag.wait">Scheduled</span><span>SHP-1854</span></div><strong>Marina Fish Bar</strong><div>Scunthorpe · 28 kg</div></div>
-          <div class="ui-stop"><div class="meta"><span class="tag.wait">Scheduled</span><span>SHP-1858</span></div><strong>The Royal Hotel</strong><div>Lincoln · 51 kg</div></div>
+          <div class="ui-stop"><div class="meta"><span class="tag done">Delivered</span><span>SHP-1854</span></div><strong>Marina Fish Bar</strong><div>DN15 · Scunthorpe · 28 kg</div></div>
+          <div class="ui-stop"><div class="meta"><span class="tag done">Delivered</span><span>SHP-1851</span></div><strong>Grand Harbour Hotel</strong><div>DN31 · Grimsby · 64 kg · £1,112.00</div></div>
+          <div class="ui-stop"><div class="meta"><span class="tag done">Delivered</span><span>SHP-1842</span></div><strong>The Salt Cod Inn</strong><div>DN35 · Cleethorpes · 42 kg · £1,284.50</div></div>
+          <div class="ui-stop on"><div class="meta"><span class="tag go">In transit</span><span>SHP-1847</span></div><strong>Riverside Steak &amp; Seafood</strong><div>HU1 · Hull · 86 kg · £1,940.20</div></div>
+          <div class="ui-stop"><div class="meta"><span class="tag wait">Scheduled</span><span>SHP-1858</span></div><strong>The Royal Hotel</strong><div>LN1 · Lincoln · 51 kg</div></div>
         </div>
         <div class="ui-main">
           <div class="ui-top">
@@ -749,7 +751,7 @@
           <div class="tl">
             <div><i class="done">1</i>Scheduled</div>
             <div><i class="done">2</i>Staged</div>
-            <div><i class="todo">3</i>In Transit</div>
+            <div><i class="done">3</i>In Transit</div>
             <div><i class="todo">4</i>Delivered</div>
           </div>
         </div>
