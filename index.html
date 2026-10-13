@@ -176,6 +176,18 @@
     .grimsby .lead { max-width: none; margin-bottom: 18px; }
     @media (max-width: 600px) { .grimsby { flex-direction: column; text-align: center; } }
 
+    .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; text-align: left; }
+    .plan { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 24px; }
+    .plan h3 { font-size: 18px; margin-bottom: 6px; }
+    .price { font-size: 32px; font-weight: 800; letter-spacing: -.03em; color: var(--purple); margin-bottom: 14px; }
+    .price span { font-size: 14px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+    .plan ul { list-style: none; display: grid; gap: 8px; font-size: 14px; color: #4b4458; }
+    .plan li::before { content: "✓"; color: var(--violet); font-weight: 800; margin-right: 8px; }
+    .extras { margin: 24px auto 0; max-width: 760px; display: grid; gap: 6px; font-size: 14px; color: var(--muted); line-height: 1.5; }
+    .extras strong { color: var(--ink); }
+    #pricing .hero-ctas { justify-content: center; margin-top: 24px; }
+    @media (max-width: 900px) { .plans { grid-template-columns: 1fr; } }
+
     .founding { max-width: 640px; margin: 0 auto; background: #fff; border: 2px solid var(--violet); border-radius: 24px; padding: 40px 28px; text-align: center; }
     .founding h2 { margin-bottom: 10px; }
     .founding .offer { font-size: 18px; line-height: 1.5; margin-bottom: 22px; }
@@ -257,6 +269,7 @@
         <a href="#how">How it works</a>
         <a href="#screens">Product</a>
         <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
         <a href="#contact">Contact</a>
       </div>
       <div class="nav-actions">
@@ -582,7 +595,36 @@
       </div>
     </section>
 
-    <section class="section alt" id="founding">
+    <section class="section alt" id="pricing">
+      <div class="wrap center">
+        <p class="kicker">Pricing</p>
+        <h2>Plans for every size of merchant</h2>
+        <div class="plans">
+          <div class="plan">
+            <h3>Merchant</h3>
+            <p class="price">£349<span>/month</span></p>
+            <ul><li>Up to 5 named users</li><li>2 scanner accounts</li></ul>
+          </div>
+          <div class="plan">
+            <h3>Trade</h3>
+            <p class="price">£749<span>/month</span></p>
+            <ul><li>Up to 15 named users</li><li>Unlimited scanners</li></ul>
+          </div>
+          <div class="plan">
+            <h3>Operations</h3>
+            <p class="price">£1,450<span>/month</span></p>
+            <ul><li>Unlimited users</li><li>Multi-site</li><li>Unlimited scanners</li></ul>
+          </div>
+        </div>
+        <div class="extras">
+          <p><strong>£950 one-off onboarding.</strong></p>
+          <p><strong>Add-ons:</strong> WhatsApp intake £149/month · Buyer ordering app £199/month</p>
+        </div>
+        <div class="hero-ctas"><button type="button" class="btn btn-primary" data-open="demo">Send your product list — we’ll set it up for you</button></div>
+      </div>
+    </section>
+
+    <section class="section" id="founding">
       <div class="wrap">
         <div class="founding">
           <p class="kicker">Founding merchants</p>
@@ -616,6 +658,7 @@
         <a href="#how">How it works</a>
         <a href="#screens">Inside the product</a>
         <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
         <a href="https://app.nodusapp.co.uk">Customer sign in</a>
       </div>
       <div>
