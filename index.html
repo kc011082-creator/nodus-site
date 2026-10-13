@@ -131,6 +131,10 @@
     .proof span { font-size: 12px; color: var(--muted); line-height: 1.4; }
 
     .soon { display: inline-block; vertical-align: middle; font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #5b21b6; background: #ede9fe; border-radius: 99px; padding: 3px 8px; white-space: nowrap; }
+    .inbox-head .soon { padding: 3px 8px; margin-left: auto; }
+    .proof .soon { margin-left: 6px; font-size: 10px; line-height: normal; color: #5b21b6; }
+    .glass .soon { margin: 0 0 10px; }
+    .glass .badge { margin-right: 6px; }
     .step .soon, .feat .soon { display: table; margin-bottom: 8px; }
     .kicker { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--lilac); margin-bottom: 12px; }
     h1 { font-size: clamp(32px, 4.4vw, 48px); line-height: 1.12; letter-spacing: -.03em; margin-bottom: 16px; }
@@ -286,10 +290,11 @@
       <div class="wrap hero-grid">
         <div class="product-wrap">
         <div class="product">
-          <button type="button" class="panel" data-open="wa" aria-label="Open WhatsApp inbox">
+          <button type="button" class="panel" data-open="wa" aria-label="Open WhatsApp inbox (add-on, coming soon)">
             <div class="inbox-head">
               <span class="on">WhatsApp inbox</span>
               <span>New</span><span>Processing</span><span>Accepted</span><span>Needs review</span>
+              <span class="soon">Add-on · Coming soon</span>
             </div>
             <div class="row">
               <div class="av" style="background:#7b61ff">SC</div>
@@ -328,7 +333,7 @@
         </div>
       </div>
       <div class="wrap proof">
-        <div><strong>WhatsApp in</strong><span>Paste the message. Priced against the live catalogue.</span></div>
+        <div><strong>WhatsApp in <span class="soon">Coming soon</span></strong><span>Add-on: paste the message, priced against the live catalogue.</span></div>
         <div><strong>Packed weight</strong><span>Invoice the kilo on the scale, not the order as placed.</span></div>
         <div><strong>Every box traced</strong><span>Scan in on Goods In, scan out on packing.</span></div>
         <div><strong>Built in Grimsby</strong><span>Written for fish merchants and food wholesalers.</span></div>
@@ -338,7 +343,7 @@
     <section class="section alt" id="how">
       <div class="wrap center">
         <p class="kicker">How it works</p>
-        <h2>From WhatsApp message to invoiced, in one flow</h2>
+        <h2>From order to invoiced, in one flow</h2>
         <p class="lead">No re-keying, no spreadsheets stitched together at midnight. One system that follows the order from the moment it lands to the moment it’s paid.</p>
         <div class="steps">
           <button type="button" class="step" data-open="wa">
@@ -622,7 +627,7 @@
         </div>
         <div class="extras">
           <p><strong>£950 one-off onboarding.</strong></p>
-          <p><strong>Add-ons:</strong> WhatsApp intake £149/month (coming soon) · Buyer ordering app £199/month</p>
+          <p><strong>Add-ons, coming soon:</strong> WhatsApp intake £149/month · Buyer ordering app £199/month</p>
           <p>All prices exclude VAT.</p>
         </div>
         <div class="hero-ctas"><button type="button" class="btn btn-primary" data-open="demo">Send your product list — we’ll set it up for you</button></div>
@@ -683,10 +688,11 @@
   <div class="toast" id="toast"></div>
 
   <div class="overlay" id="wa"><div class="glass">
-    <span class="badge">Illustrative sample</span>
+    <span class="badge">Illustrative sample</span><span class="soon">Add-on · Coming soon</span>
     <div class="mt">Paste WhatsApp order</div>
     <p class="mh">The Salt Cod Inn · 20kg Salmon (Skinless) · 10kg Cod · first van. Matched 98% · priced against the live catalogue.</p>
     <p class="mh">Confirm drops it on the packing bench. No re-keying.</p>
+    <p class="mh">WhatsApp intake is a £149/month add-on, coming soon.</p>
     <div class="actions"><button class="btn btn-ghost" data-close>Close</button><button class="btn btn-primary" data-demo>Confirm order</button></div>
   </div></div>
   <div class="overlay" id="weight"><div class="glass">
