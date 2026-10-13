@@ -46,6 +46,8 @@
     .btn-outline-light { border-color: rgba(255,255,255,.45); color: #fff; }
     .i-wa { width: 16px; height: 16px; flex: none; }
     .short { display: none; }
+    .wa-float { display: none; position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 35; width: 56px; height: 56px; border-radius: 50%; background: var(--purple); color: #fff; place-items: center; box-shadow: 0 10px 28px rgba(20,10,50,.35); }
+    .wa-float svg { width: 26px; height: 26px; }
 
     /* —— Hero —— */
     .hero { padding: 48px 0 32px; }
@@ -218,6 +220,8 @@
       .feat { border-right: 0 !important; }
       .feat:nth-last-child(-n+2) { border-bottom: 1px solid var(--line); }
       .feat:last-child { border-bottom: 0; }
+      .wa-float { display: grid; }
+      .site-foot { padding-bottom: 88px; }
     }
     @media (max-width: 480px) {
       .long { display: none; }
@@ -583,6 +587,8 @@
       <span>Sample figures on this page are illustrative.</span>
     </div>
   </footer>
+
+  <a class="wa-float" href="https://wa.me/WHATSAPP_NUMBER?text=Hi%20Karl%2C%20I%27d%20like%20to%20see%20Nodus" target="_blank" rel="noopener" aria-label="Message us on WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
 
   <div class="toast" id="toast"></div>
 
